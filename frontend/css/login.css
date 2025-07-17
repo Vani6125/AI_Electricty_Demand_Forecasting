@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+#loginform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 70vh;
+    background: #a3b8db;
+    flex-direction: column;
+    margin: 0;
+    background: url('https://i.ibb.co/gvFF48t/bg2.jpg') no-repeat center center fixed; /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire page */
+}
+
+.main {
+    background-color: #ffeddd;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+}
+/* Style for the checkbox and label */
+.input-box {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 10px; /* Space between checkbox and label */
+    margin-top: 10px;
+}
+
+.input-box input[type="checkbox"] {
+    width: 10px;  /* Increase checkbox size */
+    height: 20px;
+}
+
+.input-box label {
+    color: #2b2a2a;
+    font-size: 14px;
+    margin: 0;  /* Remove default margin */
+    line-height: 1.5;  /* Improve vertical alignment */
+}
+
+.l_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.l_logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+}
+
+h1 {
+    color: #ef5f06;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #0e0e0e;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #f78c08;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

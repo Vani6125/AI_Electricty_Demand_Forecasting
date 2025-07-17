@@ -1,0 +1,34 @@
+<div class="container">
+        <section class="filter-section">
+            <label for="report-type">Report Type:</label>
+            <select id="report-type">
+                <option value="demand">Demand Forecast</option>
+                <option value="peak-load">Peak Load Prediction</option>
+            </select>
+
+            <label for="time-period">Time Period:</label>
+            <select id="time-period">
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+
+            <button onclick="generateReport()">Generate Report</button>
+        </section>
+
+        <section>
+            <h2>Report Data</h2>
+            <table id="report-table">
+                <thead>
+                    <tr>
+                        <th>Time Period</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic data will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+    </div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Electricity Demand Forecast</title>
+</head>
+<body>
+  <h1>Electricity Demand Forecast</h1>
+  <div id="forecast">Loading forecast...</div>
+
+  <script>
+    // Fetch the forecast when the page loads.
+    fetch('http://localhost:8080/forecast.ipynb')  // Update the URL if hosted remotely.
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('forecast').innerHTML =
+          'Forecasted Demand: ' + data.forecast + '<br>' +
+          'Generated at: ' + data.timestamp;
+      })
+      .catch(error => {
+        console.error('Error fetching forecast:', error);
+        document.getElementById('forecast').innerText = 'Error loading forecast.';
+      });
+  </script>
+</body>
+</html>

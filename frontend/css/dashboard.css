@@ -1,0 +1,38 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #efedf4, #928dab);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+ 
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .chart-card canvas {
+    height: 300px;
+  }
+  
+ 

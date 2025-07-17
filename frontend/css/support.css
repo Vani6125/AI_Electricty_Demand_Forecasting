@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('https://i.ibb.co/vZPvptS/Screenshot-2025-01-24-212604.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+}
+.container {
+    flex: 1; /* Ensure the main content pushes the footer to the bottom */
+}
+
+
+.table-container {
+    margin: 50px auto;
+    padding: 50px;
+    background: rgba(252, 251, 251, 0.9);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: black;
+}
+
+th, td {
+    padding: 20px;
+    border: 2px solid #ddd;
+}
+
+th {
+    background-color: #004d99;
+    color: white;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background for the table */
+}
+
+thead th {
+  background-color: rgba(0, 68, 204, 0.8); /* Slightly transparent header */
+  color: white;
+  padding: 10px;
+}
+
+tbody td {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background for table rows */
+}
+
+
+
+
+

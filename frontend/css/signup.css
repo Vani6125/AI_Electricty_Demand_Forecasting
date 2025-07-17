@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+#signupform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  line-height: 1.5;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #ffeddd, #ffeddd);
+  flex-direction: column;
+  margin: 0;
+  background-image: url("https://i.ibb.co/ZcrcVJB/pexels-photo-1103970.webp") ;
+  background-size: cover;
+}
+/* Optional: Style for the checkbox and label */
+.input-box input[type="checkbox"] {
+  width: 10px;
+  height: 20px;
+  vertical-align: middle;
+  color: #0c0c0c;
+}
+
+.input-box label {
+  vertical-align: middle;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: linear-gradient(135deg, #ffffff, #6db2d5);
+  padding: 34px;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer, more natural shadow */
+  border: 1px solid #e0e0e0; /* Soft border for subtle definition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #181818;
+}
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 28px;
+  border-radius: 12px;
+  background: #f4d040;
+}
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #0a0a0a;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #ecc723;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #e46809;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #da8210;
+}
+form .text h3{
+ color: #0d0c0c;
+ width: 100%;
+ text-align: center;
+}
+form .text h3 a{
+  color: #e69018;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div>
+    <header>
+        <div class="logo-container">
+          <img src="https://i.ibb.co/HGSzF0n/holo-logo.png" alt="Logo">
+          <span class="logo-text">Forecasta</span>
+        </div>
+        <div class="nav">
+          <a href="home.html">Home</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="reports.html">Reports</a>
+          <a href="login.html">Login</a>
+          <a href="signup.html">Signup</a>
+          <a href="support.html">Support</a>
+        </div>
+      </header>
+      </div>
+      <section id="loginform">
+    <div class="main">
+        <div class="l_logo">
+            <!-- Logo Section -->
+            <img src="https://i.ibb.co/HGSzF0n/holo-logo.png" alt="Logo">
+            <h1>Forecasta</h1>
+        </div>
+        <h3>Enter your login credentials</h3>
+
+        <form action="#">
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required>
+                            <!-- Password visibility toggle (Checkbox beside password input box) -->
+ <div class="input-box">
+  <input type="checkbox" id="showPassword"> 
+  <label for="showPassword">Show Password</label>
+</div>
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+         <!-- Error message container -->
+      <div id="error-message" style="color: red;"></div>
+        <p>Not registered?
+            <a href="signup.html" style="text-decoration: none;">
+                Create an account
+            </a>
+        </p>
+    </div>
+    </section>
+    <div>
+    <footer>
+        <div class="footer">
+          <div class="footer-section">
+            <img src="https://i.ibb.co/HGSzF0n/holo-logo.png" alt="Forecasta Logo">
+            <span style="font-size: 24px; font-weight: bold;">Forecasta</span>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="reports.html">Reports</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <a href="faq.html">FAQ's</a>
+          </div>
+          <div class="footer-section">
+            <h3>Contact us</h3>
+            <p>Vani Manukonda</p>
+            <p>+123456789</p>
+            <p><a href="mailto:vm@gmail.com" style="color: white;">vm@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="copyright">
+          Copyright &copy; 2025 Forecasta | All rights reserved
+        </div>
+      </footer>
+      </div>
+      <script src="../js/script.js"></script>
+      <script src="../../backend/login.js"></script>
+</body>
+
+
+</html>
