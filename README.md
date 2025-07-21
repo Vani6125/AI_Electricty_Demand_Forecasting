@@ -12,7 +12,7 @@ Electricity demand forecasting is crucial for efficient energy management, minim
 - Time series forecasting using ARIMA
 - Interactive dashboard for user input and forecast display
 - Missing value handling and data preprocessing
-- End-to-end web deployment using Flask (backend) and HTML/CSS/JS (frontend)
+- End-to-end web deployment using Flask (backend), Postgresql and HTML/CSS/JS (frontend)
 
 ## 🧠 Tech Stack
 
@@ -27,5 +27,5 @@ Electricity demand forecasting is crucial for efficient energy management, minim
 
 - **Source**: Kaggle
 - **Years Covered**: 2015 to 2022
-- **Attributes**: Date, Time, Electricity Demand (in MW), Temperature , Day type 
+- **Attributes**: Date, Day, Holiday, Temperature , Rain, Inflation, MaxT, MinT, Windspeed, Humidity, Precipitation, Energy Required (MU)
 
