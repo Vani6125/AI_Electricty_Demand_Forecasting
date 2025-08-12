@@ -1,64 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/dashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forecast Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment"></script>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-          <img src="https://i.ibb.co/HGSzF0n/holo-logo.png" alt="Logo">
-          <span class="logo-text">Forecasta</span>
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/HGSzF0n/holo-logo.png" alt="Logo" />
+      <span class="logo-text">Forecasta</span>
+    </div>
+    <div class="nav">
+      <a href="home.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="reports.html">Reports</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+      <a href="support.html">Support</a>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="dashboard-header">
+      <h1><i class="fas fa-bolt"></i> Energy Demand Forecast</h1>
+      <div class="last-updated" id="lastUpdated"></div>
+    </section>
+
+    <section class="forecast-section">
+      <div class="forecast-card glass-card">
+        <h2><i class="fas fa-calendar-day"></i> Today's Forecast</h2>
+        <div class="forecast-value" id="todayForecast">
+          <div class="loading-spinner"></div>
         </div>
-        <div class="nav">
-          <a href="home.html">Home</a>
-          <a href="dashboard.html">Dashboard</a>
-          <a href="reports.html">Reports</a>
-          <a href="login.html">Login</a>
-          <a href="signup.html">Signup</a>
-          <a href="support.html">Support</a>
+        <button id="refreshForecast" class="refresh-btn">
+          <i class="fas fa-sync-alt"></i> Refresh
+        </button>
+      </div>
+
+      <div class="stats-card glass-card">
+        <h2><i class="fas fa-chart-bar"></i> Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-label">Average</div>
+            <div class="stat-value" id="avgDemand">--</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Trend</div>
+            <div class="stat-value trend-indicator" id="demandTrend">--</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">High</div>
+            <div class="stat-value" id="highDemand">--</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Low</div>
+            <div class="stat-value" id="lowDemand">--</div>
+          </div>
         </div>
-      </header>
+      </div>
+    </section>
 
-      <h2>Last 5 Days Forecasted Demand</h2>
-      <img src="data:image/png;base64,{{ chart_image }}" alt="Forecast Chart" style="max-width:100%; height:auto;">
-
-
-  <div>
-    <footer>
-        <div class="footer">
-            <div class="footer-section">
-                <img src="https://i.ibb.co/HGSzF0n/holo-logo.png" alt="Forecasta Logo">
-                <span style="font-size: 24px; font-weight: bold;">Forecasta</span>
-            </div>
-
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="home.html">Home</a>
-                <a href="dashboard.html">Dashboard</a>
-                <a href="reports.html">Reports</a>
-                <a href="login.html">Login</a>
-                <a href="signup.html">Signup</a>
-                <a href="faq.html">FAQ's</a>
-            </div>
-
-            <div class="footer-section">
-                <h3>Contact us</h3>
-                <p>Vani Manukonda</p>
-                <p>+123456789</p>
-                <p><a href="mailto:vm@gmail.com" style="color: white;">vm@gmail.com</a></p>
-            </div>
+    <section class="chart-section">
+      <div class="section-header">
+        <h2><i class="fas fa-chart-line"></i> Last 7 Days Forecast</h2>
+        <div class="chart-controls">
+          <select id="chartType" class="chart-select">
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+          </select>
+          <button id="exportChart" class="export-btn">
+            <i class="fas fa-download"></i> Export
+          </button>
         </div>
+      </div>
+      <div class="chart-container glass-card">
+        <canvas id="forecastChart"></canvas>
+      </div>
+    </section>
+  </main>
 
-        <div class="copyright">
-            Copyright &copy; 2025 Forecasta | All rights reserved
-        </div>
-    </footer>
-</div>
-  <script src="../js/script.js" defer></script>
+  <footer>
+    <div class="footer">
+      <div class="footer-section">
+        <img src="https://i.ibb.co/HGSzF0n/holo-logo.png" alt="Forecasta Logo">
+        <span style="font-size: 24px; font-weight: bold;">Forecasta</span>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="home.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="faq.html">FAQ's</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact us</h3>
+        <p>Vani Manukonda</p>
+        <p>+123456789</p>
+        <p><a href="mailto:vm@gmail.com" style="color: white;">vm@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright &copy; 2025 Forecasta | All rights reserved
+    </div>
+  </footer>
+
+  <script src="../js/dashboard.js"></script>
 </body>
 </html>
